@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant Name</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            /* min-height: 100vh;
+            background-image: url('white-sauce-pasta.jpg');
+            background-size: cover;
+            background-position: center; */
+            background-color: #0e0d0d;
+
+        }
+
+        .navbar {
+            background-color: #000;
+            padding: 20px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .navbar a {
+            color: #f0a01f;
+            text-decoration: none;
+            margin: 0 10px;
+
+        }
+
+        .navigation a {
+            position: relative;
+            font-size: 1.1em;
+            color: #f0a01f;
+            text-decoration: none;
+            font-weight: 500px;
+            margin-left: 40px;
+        }
+
+        .navigation a::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 3px;
+            background: #f0a01f;
+            border-radius: 5px;
+            left: 0;
+            bottom: -6px;
+            transform-origin: right;
+            transform: scaleX(0);
+            transition: transform .5s;
+        }
+
+        .navigation a:hover::after {
+            transform-origin: left;
+            transform: scaleX(1);
+        }
+
+        .backg {
+            min-height: 100vh;
+            background-image: url('white-sauce-pasta.jpg');
+            background-size: cover;
+            background-position: center;
+        }
+
+        .content {
+            padding-top: 250px;
+            padding-left: 20px;
+            text-align: left;
+            width: 500px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            font-size: 60px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        p {
+            font-size: 30px;
+            margin-bottom: 20px;
+            color: white;
+        }
+
+        hr {
+            color: rgba(42, 41, 40, 0.8);
+            margin-top: 40px;
+        }
+
+        .btn {
+            background-color: #f0a01f;
+            color: #000;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 1.3em;
+            text-transform: uppercase;
+            transition: background-color 0.3s;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            background-color: #fdc75c;
+        }
+
+        .boxes {
+            display: flex;
+            justify-content: center;
+            margin-top: 50px;
+            gap: 20px;
+            bottom: 0;
+        }
+
+        .box {
+            width: 200px;
+            background-color: rgba(42, 41, 40, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .box:hover {
+            cursor: pointer;
+            transform: scale(1.2);
+            z-index: 1;
+        }
+
+        .box img {
+            width: 100%;
+            border-radius: 10px;
+            height: 168px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .box h2 {
+            font-size: 1.5em;
+            text-align: center;
+            font-size: 20px;
+            margin: 8px;
+            padding: 8px;
+            color: white;
+        }
+
+        .cuisine {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 40px;
+            margin-top: 180px;
+        }
+
+        .cuisine div {
+            width: 450px;
+            height: 300px;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+
+        }
+
+        .cuisine div:hover{
+            cursor: pointer;
+            transform: scale(1.2);
+            z-index: 1;
+        }
+
+        .cuisine h2 {
+            color: white;
+            font-size: 40px;
+        }
+
+        .cuisine div img {
+            width: 450px;
+            border-radius: 10px;
+            height: 350px;
+            object-fit: cover;
+            width: 100%;
+        }
+
+        .cuisine div button {
+            color: #000;
+            background-color: #f0a01f;
+            border: none;
+            border-radius: 5px;
+            height: 44px;
+            font-size: 15px;
+            font-weight: bold;
+            margin: 15px;
+            cursor: pointer;
+        }
+
+        .locations {
+            margin-top: 170px;
+        }
+
+        .locations div {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: 50px;
+            padding: 12px;
+            height: 500px;
+        }
+
+        .locations div img {
+            height: 500px;
+        }
+
+        .locations div .loc {
+            width: 200px;
+        }
+
+        .locations div .loc h2 {
+            color: white;
+
+        }
+
+        footer{
+            background-color: rgba(42, 41, 40, 0.8);;
+        }
+
+        .rightfoot {
+            /* border: 2px solid black; */
+            height: 175px;
+            padding: 5px;
+            width: 60%;
+            margin-left: 290px;
+            display: flex;
+            
+            justify-content: space-around;
+            align-items: center;
+            gap: 10px;
+
+        }
+
+        .rightfoot a {
+            text-decoration: none;
+            color: rgb(244, 154, 44);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .rightfoot .ft {
+            filter: invert();
+            fill: rgb(239, 154, 49);
+        }
+
+        .fticons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+            margin: 12px;
+            padding: 5px;
+        }
+
+        .ftinfo {
+            color: rgb(255, 202, 138);
+            font-size: 20px;
+            text-align: center;
+        }
+
+        .foot-footer {
+            color: rgb(255, 202, 138);
+            font-size: 20px;
+            text-align: center;
+            transform: translateY(-50px);
+            padding: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="navbar">
+        <img src="logo.svg" alt="Restaurant Logo" height="40">
+
+        <div class="atag">
+            <nav class="navigation">
+
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#menu">Menu</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </nav>
+        </div>
+
+
+    </div>
+    <div class="backg">
+        <div class="content" id="home">
+            <h1>Welcome to Delicious Tables </h1>
+            <p>Delicious food served with love!</p>
+            <a href="#menu" class="btn">BOOK YOUR TABLE</a>
+        </div>
+    </div>
+
+    <section class="boxes">
+        <div class="box">
+            <img src="breakfast.jpg" alt="Food Image 1">
+            <h2>Breakfast</h2>
+        </div>
+        <div class="box">
+            <img src="lunch.webp" alt="Food Image 2">
+            <h2>Lunch</h2>
+        </div>
+        <div class="box">
+            <img src="dinner.jpg" alt="Food Image 3">
+            <h2>Dinner </h2>
+        </div>
+    </section>
+    <hr>
+
+    <section class="cuisine">
+        <h2>Enjoy Your Favourite cuisine !!</h2>
+        <div>
+            <img src="cusines.jpg" alt="">
+            <button>Explore cuisine</button>
+        </div>
+    </section>
+
+
+    <section class="locations">
+        <div>
+            <img src="location.webp" alt="">
+            <div class="loc">
+
+                <h2>Delicious Tables Restaurant,
+                    123 Main Street, Colaba,
+                    Mumbai, Maharashtra, India</h2>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="rightfoot">
+            <a href="aboutUs.html"><span>About us</span></a>
+            <a href="job.html"><span>Jobs</span></a>
+            <a href=""><span>Privacy Policy</span></a>
+            <a href=""><span>Contact us</span></a>
+            <div class="fticons">
+
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/whatsapp-stroke-rounded.svg" alt="whatsapp" width="24"
+                        height="24" />
+                </div>
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/instagram-stroke-rounded.svg" alt="instagram" width="24"
+                        height="24" />
+                </div>
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/snapchat-stroke-rounded.svg" alt="snapchat" width="24"
+                        height="24" />
+                </div>
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/facebook-02-stroke-rounded.svg" alt="facebook-02"
+                        width="24" height="24" />
+                </div>
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/linkedin-01-stroke-rounded.svg" alt="linkedin-01"
+                        width="24" height="24" />
+                </div>
+                <div class="ft">
+                    <img src="https://cdn.hugeicons.com/icons/twitter-stroke-rounded.svg" alt="twitter" width="24"
+                        height="24" />
+                </div>
+            </div>
+        </div>
+
+        <div class="ftinfo">
+            delicioustables@gmail.com
+        </div>
+
+        <div class="foot-footer">
+            DELICIOUS TABLES !! Where every bite tells a story of flavor !
+        </div>
+        <div class="foot-footer">
+            All right reserved.
+        </div>
+        <div class="foot-footer">
+            CopyRight©2023, Namaste India Tour Pvt. Ltd
+        </div>
+    </footer>
+
+    <script>
+        // Add any JavaScript for interactivity here
+    </script>
+</body>
+
+</html>
